@@ -1,0 +1,40 @@
+﻿
+
+
+@model IQueryable<ECommerce.Models.Produit>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE Html>
+<html>
+<head>
+    <title> Page de synthèse </title>
+</head>
+<body>
+    <p>
+        <h2>Liste des produits disponibles</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nom du Produit</th>
+                    <th>Prix</th>
+                    <th>Catégorie</th>
+                    <th>Désription</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ECommerce.Models.Produit r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Prix</td>
+                        <td>@r.Categorie</td>
+                        <td>@r.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+</body>
+</html>
+
